@@ -5,4 +5,5 @@ import java.util.*
 
 class Filme(val nome: String, val Cinema: Cinema, var avaliacao: Int, val DataVisualizacao: Date) {
     var observacoes: String? = null
+
 }
