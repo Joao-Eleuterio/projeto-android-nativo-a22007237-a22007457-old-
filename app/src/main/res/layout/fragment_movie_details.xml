@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBlue"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/purple_500"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tvNomeDoFilme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome do filme"
+        android:textColor="@android:color/white"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        android:layout_below="@+id/btnVoltar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/red"
+        android:layout_below="@+id/tvNomeDoFilme"
+        android:layout_marginTop="8dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/separator"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivImagemDeCartaz"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src=""
+                tools:ignore="ContentDescription"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/tvGenero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Género"
+                android:textColor="@android:color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvSinopse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sinopse (Resumo)"
+                android:textColor="@android:color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvDataDeLancamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data de lançamento: 2023/01/31"
+                android:textColor="@android:color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:id="@+id/tvAvaliacaoDoIMDB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avaliação do IMDB (média e total de votações)"
+                android:textColor="@android:color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            <TextView
+                android:id="@+id/tvLinkParaIMDB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:text="https://www.imdb.com/"
+                android:textColor="@color/colorAccent"
+                android:minHeight="48dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:id="@+id/tvNomeDoCinema"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome do cinema onde o filme foi visualizado"
+                android:textColor="@android:color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:id="@+id/tvAvaliacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avaliação numa escala de 1 a 10"
+                android:textColor="@android:color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:id="@+id/tvDataEmQueOFilmeFoiVisto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data em que o filme foi visto: 2023/01/31"
+                android:textColor="@android:color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:id="@+id/tvFotografias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fotografias registadas pelo utilizador"
+                android:textColor="@android:color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <EditText
+                android:id="@+id/tvObservacoes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Observações"
+                android:textColorHint="@android:color/white"
+                android:background="@drawable/edittext_bg"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:padding="8dp"
+                android:layout_marginBottom="16dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
